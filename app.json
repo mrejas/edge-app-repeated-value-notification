@@ -1,0 +1,50 @@
+{
+  "author": "IoT Open",
+  "licence": "MIT",
+  "input": {
+	  "trigger_functions": {
+		  "required": true,
+		  "name": "Trigger functions",
+		  "description": "These functions will be checked for value",
+		  "type": "multi_function_selector"
+	  },
+	  "overOrUnder": {
+		  "required": true,
+		  "name": "Over/Under",
+		  "description": "Send alarm over or under the specified value",
+		  "type": "toggle",
+		  "true_value": "over",
+		  "false_value": "under"
+	  },
+	  "threshold": {
+		  "name": "Threshold",
+		  "type": "number",
+		  "required": true
+	  },
+	  "repetitions": {
+		  "name": "Repetitions",
+		  "description": "Only send alarm after this many consecutive values matching.",
+		  "type": "number",
+		  "required": true
+	  },
+	  "notification_output": {
+		  "name": "Select notification",
+		  "description": "Select the notification output to send notifications with.",
+		  "type": "single_notification_output_selector"
+	  }
+  },
+  "guide": [
+    {
+      "id": "stage_1",
+      "title": "Parameter selection",
+      "description": "Set the parameters you want to use.",
+      "input_fields": [
+		  "trigger_functions",
+		  "overOrUnder",
+		  "threshold",
+		  "repetitions",
+		  "notification_output"
+      ]
+    }
+  ]
+}
