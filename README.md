@@ -7,8 +7,9 @@ Example notification message.
 
 ```
 Installation: {{.installation.Name}}
-Value: {{.payload.value}}
+Device: {{.payload.device.meta.name}}
 Function: {{.payload.func.meta.name}}
+Value: {{.payload.value}}
 Action: {{.payload.action}} (over or under)
 ```
-.payload.func is the complete function object. 
+.payload.func  and payload.device are the complete function and device objects. 
